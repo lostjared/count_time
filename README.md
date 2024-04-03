@@ -32,7 +32,7 @@ This example searches for `.mp4` and `.avi` files. Adjust the regex pattern to m
 The program prints the length of each matched video file and the total runtime of all matched video files in the specified directory and its subdirectories.
 
 ### Example Output:
-
+```sh
 jared@iLostSideDead [~/Movies]$ count_time . AC2
 
 ./CloudsGlitch-2020.03.11_23.43.22_MPEG-4-1280x720p23.98.AC2.Output.1.mp4 56.8902 seconds...
@@ -54,3 +54,4 @@ jared@iLostSideDead [~/Movies]$ count_time . AC2
 ./JaredWebcam-2020.03.11_22.12.53_MPEG-4-1920x1080p29.00.AC2.Output.1.mp4 62.2414 seconds...
 
         Runtime: 11 minutes 6 seconds..
+```
