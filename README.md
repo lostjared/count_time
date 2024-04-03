@@ -23,7 +23,7 @@ sudo make install
 Run the compiled program from the terminal with two arguments: the path to the directory you want to analyze and the regex pattern to match video files.
 
 ```sh
-./video_analyzer /path/to/directory ".*\.(mp4|avi)$"
+count_time /path/to/directory ".*\.(mp4|avi)$"
 ```
 
 This example searches for `.mp4` and `.avi` files. Adjust the regex pattern to match the types of video files you're interested in.
