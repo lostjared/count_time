@@ -1,11 +1,39 @@
-# count_time
 
-Count the length of video files recursively matching with Regular Expressions.
+### README.md for Video Directory Analysis Tool
 
+#### Overview
+This tool recursively scans a specified directory for video files, matches them against a provided regular expression pattern, and calculates the total runtime (in minutes and seconds) of all matched videos. It is useful for quickly assessing the amount of video content within a directory structure that matches certain criteria.
 
-Example Output:
+#### Dependencies
+- [OpenCV](https://opencv.org/): Used for video file processing to determine video lengths.
+- C++ Compiler (e.g., g++, clang++): For compiling the program.
+- Make (optional): For simplifying the compilation process.
 
-jared@iLostSideDead [~/Movies]$ count_time .  AC2
+#### Compilation
+To compile the program, ensure that OpenCV is installed on your system. Then, use the following command in the terminal:
+
+```sh
+mkdir build && cd build
+cmake ..
+make 
+sudo make install
+```
+
+#### Usage
+Run the compiled program from the terminal with two arguments: the path to the directory you want to analyze and the regex pattern to match video files.
+
+```sh
+./video_analyzer /path/to/directory ".*\.(mp4|avi)$"
+```
+
+This example searches for `.mp4` and `.avi` files. Adjust the regex pattern to match the types of video files you're interested in.
+
+#### Output
+The program prints the length of each matched video file and the total runtime of all matched video files in the specified directory and its subdirectories.
+
+### Example Output:
+
+jared@iLostSideDead [~/Movies]$ count_time . AC2
 
 ./CloudsGlitch-2020.03.11_23.43.22_MPEG-4-1280x720p23.98.AC2.Output.1.mp4 56.8902 seconds...
 
@@ -25,4 +53,4 @@ jared@iLostSideDead [~/Movies]$ count_time .  AC2
 
 ./JaredWebcam-2020.03.11_22.12.53_MPEG-4-1920x1080p29.00.AC2.Output.1.mp4 62.2414 seconds...
 
-	Runtime: 11 minutes 6 seconds..
+        Runtime: 11 minutes 6 seconds..
